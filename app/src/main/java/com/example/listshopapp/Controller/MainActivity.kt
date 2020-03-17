@@ -1,7 +1,8 @@
-package com.example.listshopapp
+package com.example.listshopapp.Controller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.listshopapp.R
 
 class MainActivity : AppCompatActivity() {
 
