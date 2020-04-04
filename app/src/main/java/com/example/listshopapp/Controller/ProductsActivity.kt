@@ -17,12 +17,7 @@ class ProductsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        if(resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE){
-            setContentView(R.layout.activity_products)
-        } else {
-            setContentView(R.layout.activity_products)
-        }
+        setContentView(R.layout.activity_products)
 
 
         val categoryType = intent.getStringExtra(EXTRA_CATEGORY)
