@@ -1,6 +1,7 @@
 package com.example.listshopapp.Controller
 
 import android.content.Intent
+import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
@@ -16,7 +17,13 @@ class ProductsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_products)
+
+        if(resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE){
+            setContentView(R.layout.activity_products)
+        } else {
+            setContentView(R.layout.activity_products)
+        }
+
 
         val categoryType = intent.getStringExtra(EXTRA_CATEGORY)
         adapter = ProductAdapter(this, DataService.getProducts(categoryType))
